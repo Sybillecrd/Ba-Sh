@@ -1,17 +1,284 @@
-#home {
-  background-color: #D23333;
+.banner {
   color: white;
-  height: 100vh;
+  height: 70vh;
+  background-size: cover !important;
+  display: flex;
+  align-items: flex-end;
+}
+
+@media (min-width: 20px) and (max-width: 735px){
+  .banner {
+    background-position: center;
+  }
+}
+
+.banner p {
+  font-size: 25px;
+  color: white;
+  margin-bottom: 30px;
+  margin-left: 50px;
+  font-style: italic;
+  font-weight: lighter;
+}
+
+.cards-escape {
+  display: grid;
+  margin: 5% 5% 5% 5%;
+  grid-column-gap: 2%;
+  grid-template-columns: repeat(3, minmax(200px, 1fr));
+  align-self: center;
+  grid-template-areas:
+    "image image image"
+    ". button ."
+}
+
+.card-img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+}
+
+.card-infos {
   display: flex;
   align-items: center;
-  justify-content: space-around;
-  text-align: center;
-  p {
-    margin-top: 1.5em;
+  justify-content: space-between;
+}
+.card-title {
+  small {
+    text-transform: uppercase;
+    font-size: 12px;
   }
-  a {
-    color: rgba(0,0,0,0.4);
-    font-weight: bold;
-    font-size: 16px;
+}
+.bucket {
+  font-size: 12px;
+  text-transform: uppercase;
+}
+.card-price {
+  font-size: 12px;
+  margin-top: -14px;
+}
+
+.btn-discover {
+  grid-area: button;
+  margin-top: 50px;
+  width: 60%;
+  color: white;
+  background-color: black;
+  text-transform: uppercase;
+  font-weight: lighter;
+  font-size: 14px;
+  letter-spacing: 2px;
+  justify-self: center;
+}
+
+@media (min-width: 20px) and (max-width: 735px){
+  .cards-escape {
+    display: grid;
+    margin: 5% 4% 2% 4%;
+    grid-template-columns: 85%;
+    justify-content: center;
+    grid-template-rows: repeat(3, 1fr);
+    grid-row-gap: 1%;
+    grid-template-areas:
+      "image" "image" "image" "button"
+  }
+  .btn-discover {
+    width: 100%;
+    margin-top: 8px;
+  }
+}
+
+.title {
+  max-width: 90%;
+  margin: 50px auto;
+}
+.hr-text {
+  position: relative;
+  border: 0;
+  color: black;
+  text-align: center;
+  height: 1.5em;
+  font-size: 30px;
+  font-style: italic;
+  &:before {
+    content: '';
+    background: black;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    height: 1px;
+  }
+  &:after {
+    content: attr(data-content);
+    position: relative;
+    display: inline-block;
+    color: black;
+    padding: 0 .5em;
+    background-color: #F4F4F4;
+  }
+}
+
+@media (min-width: 20px) and (max-width: 735px) {
+  .title {
+    margin: 100px auto 30px auto;
+  }
+  .hr-text {
+    font-size: 20px;
+  }
+}
+
+.allure {
+  display: grid;
+  grid-template-columns: 2fr 1fr 3fr;
+}
+
+.allure-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 2fr;
+
+}
+
+.part-white {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.btn-lookbook {
+  color: white;
+  background-color: black;
+  text-transform: uppercase;
+  font-weight: lighter;
+  font-size: 14px;
+  letter-spacing: 2px;
+  margin-top: 20px;
+}
+
+.part-green {
+  background-color: #1B7046;
+  position: relative;
+}
+
+.card-allure {
+  position: relative;
+}
+
+.little-img-allure {
+  position: absolute;
+  top: 70px;
+  left: 100px;
+  height: 350px;
+  z-index: 1;
+}
+.little-img-allure-2 {
+  position: absolute;
+  top: 70px;
+  left: 120px;
+  height: 350px;
+  z-index: 1;
+}
+
+.card-allure-infos {
+  position: absolute;
+  right: 30px;
+  top: 30px;
+  text-align: right;
+  line-height: 10px;
+}
+
+.big-img-allure {
+  height: 500px;
+}
+.big-img-allure-2 {
+  height: 500px;
+  width: 650px;
+  object-fit: cover;
+}
+
+.card-allure-infos-green {
+  position: absolute;
+  line-height: 10px;
+  bottom: 8px;
+  right: 10px;
+  color: white;
+  text-align: right;
+  font-weight: lighter;
+}
+
+.card-allure-xs {
+  display: grid;
+  position: relative;
+  grid-template-columns: 1fr;
+}
+
+.allure-infos-xs {
+  position: absolute;
+  color: white;
+  bottom: 50px;
+  text-align: center;
+  justify-self: center;
+    h3 {
+      font-weight: lighter;
+    }
+}
+.btn-lookbook-xs {
+  width: 290px;
+  background-color: white;
+  color: black;
+  margin-top: 10px;
+  text-transform: uppercase;
+  font-size: 14px;
+  letter-spacing: 2px;
+}
+
+.btn-shop-display {
+  display: flex;
+  justify-content: center;
+}
+
+.btn-shop {
+  margin-top: 80px;
+  width: 200px;
+  color: white;
+  background-color: black;
+  text-transform: uppercase;
+  font-weight: lighter;
+  font-size: 14px;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+}
+
+.cards-jungle {
+  display: grid;
+  margin: 5% 15% 1% 15%;
+  grid-column-gap: 2%;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-row-gap: 2%;
+  align-self: center;
+}
+
+.card-img-jungle {
+  width: 100%;
+  height: 640px;
+  object-fit: cover;
+}
+
+@media (min-width: 20px) and (max-width: 735px){
+  .cards-jungle {
+    display: grid;
+    margin: 5% 4% 5% 4%;
+    grid-template-columns: 85%;
+    justify-content: center;
+    grid-template-rows: repeat(4, 1fr);
+    grid-row-gap: 1%;
+  }
+  .btn-shop {
+    width: 78%;
+  }
+  .card-img-jungle {
+    height: 500px;
   }
 }
