@@ -9,6 +9,7 @@ gem 'middleman-livereload'
 gem 'sass', '~> 3.2.10'
 gem 'compass', '0.12.2'
 gem 'compass-sourcemaps', "~> 0.12.2.sourcemaps.57a186c"
+gem 'dotenv-rails', groups: [:development, :test]
 
 # Assets
 gem 'font-awesome-sass'
